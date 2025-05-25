@@ -2,3 +2,21 @@
     /* For about section logo shadow */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
 }
+
+.bulleted-text {
+    position: relative;
+    padding-left: 16px;
+}
+
+.bulleted-text::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #BD1F17;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}

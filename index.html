@@ -47,7 +47,6 @@
                 <a href="#" class="hover:text-yellow-400">Contact</a>
             </nav>
 
-            <!-- Book a table button -->
             <button class="hidden md:flex bg-yellow-400 text-black font-bold px-4 py-2 rounded hover:bg-yellow-300">
                 BOOK A TABLE
             </button>
@@ -61,7 +60,6 @@
                 </svg>
             </button>
         </div>
-
         <!-- Hero Section -->
         <div class="container mx-auto px-6 py-12 flex flex-col lg:flex-row items-center">
 
@@ -88,9 +86,10 @@
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-28">
-        <section>
-            <div class="hidden lg:flex">
+    <main class="container mx-auto px-6 py-4 justify-between items-center">
+        <!-- About Section -->
+        <section class="container my-24">
+            <div class="lg:flex">
                 <div class="relative lg:flex-1 mr-20">
                     <img src="./images/about1.jpg" alt="Delicious Burger" class="w-full h-auto">
                     <div class="absolute top-5 left-5 bg-white rounded-xl shadow-lg p-4 flex items-center space-x-3">
@@ -112,15 +111,15 @@
                         <a href="" class="text-black px-4 py-2 hover:bg-red-200">Contact</a>
                     </div>
 
-                    <div>
+                    <div class="flex-col">
                         <h1 class="mt-12 font-bebas text-6xl font-semibold">Exceptional culinary <br>experience and
                             delicious food</h1>
-                        <p class="mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare non sed est
-                            cursus. Vel hac
-                            convallis ipsum, facilisi odio pellentesque bibendum viverra tempus. Lorem ipsum dolor sit
-                            amet consectetur adipiscing elit do eiusmod tempor incididunt ut labore et dolore magna
-                            minim veniam nostrud exercitation</p>
-                        <div class="flex">
+                        <p class="mt-6">Experience a journey of taste with our exceptional culinary offerings. Every
+                            dish is made with fresh, high-quality ingredients. Our menu blends classic favorites with
+                            creative twists. From appetizers to desserts, each bite is full of flavor. Enjoy delicious
+                            food in a cozy and welcoming setting. Perfect for casual meals or special occasions. Satisfy
+                            your cravings and elevate your dining experience.</p>
+                        <div class="flex my-10">
                             <button
                                 class="mt-6 bg-yellow-400 text-black font-bold px-5 py-3 rounded hover:bg-yellow-300">
                                 About More
@@ -131,33 +130,126 @@
                     </div>
                 </div>
             </div>
-            <div class="lg:flex my-12 sm:flex-row">
-                <div class="flex mx-12">
-                    <img src="./images/aboutLogo1.png" alt="box-logo" class="mr-4 rounded-full subtle-shadow p-4">
+            <div class="lg:flex lg:my-12 flex-row justify-between items-center mx-8">
+                <div class="flex my-8">
+                    <img src="./images/aboutLogo1.png" alt="box-logo"
+                        class="mr-4 rounded-full subtle-shadow p-5 h-24 w-24">
                     <div class="w-80 mt-4">
                         <h4 class=" font-bebas text-3xl font-bold">fast delivery</h4>
                         <p class="text-xl">Within 30minutes</p>
                     </div>
                 </div>
-                <div class="flex mx-12">
-                    <img src="./images/aboutLogo2.png" alt="rating-logo" class="mr-4 rounded-full subtle-shadow p-4">
+                <div class="flex my-8">
+                    <img src="./images/aboutLogo2.png" alt="rating-logo"
+                        class="mr-4 rounded-full subtle-shadow p-5 h-24 w-24">
                     <div class="w-80 mt-4">
                         <h4 class="font-bebas text-3xl font-bold">absolute dining</h4>
                         <p class="text-xl">Best buffet restaurant</p>
                     </div>
                 </div>
-                <div class="flex">
-                    <img src="./images/aboutLogo3.png" alt="delivery-logo" class="mr-4 rounded-full subtle-shadow p-4">
+                <div class="flex my-8">
+                    <img src="./images/aboutLogo3.png" alt="delivery-logo"
+                        class="mr-4 rounded-full subtle-shadow p-5 h-24 w-24">
                     <div class="w-80 mt-4">
                         <h4 class="font-bebas text-3xl font-bold">pickup delivery</h4>
                         <p class="text-xl">Grab your food order</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="container my-24">
+
+            <div class="flex ">
+                <div class="w-[1168px] h-28 justify-between items-center">
+                    <p class="text-xl font-bold text-[#BD1F17] bulleted-text"> Crispy, Every Bite Taste</p>
+                    <h2 class="font-bebas text-5xl lg:text-6xl font-bold mt-7">POPULAR FOOD ITEMS</h2>
+                </div>
+
+                <div class="hidden lg:flex h-28 ml-56">
+                    <a href="#"
+                        class="flex items-center justify-center px-3 w-16 h-16 subtle-shadow me-3 font-medium rounded-full ">
+                        <svg class="p-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 5H1m0 0 4 4M1 5l4-4" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-center px-3 subtle-shadow w-16 h-16 text-[#BD1F17] font-medium rounded-full ">
+
+                        <svg class="p-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="my-24 lg:grid-cols-4 gap-6 grid grid-cols-1">
+
+                <div
+                    class="w-80 h-80 bg-white p-6 flex flex-col items-center justify-between shadow-lg shadow-slate-400 rounded-lg">
+                    <div class="w-full flex justify-center pt-2 pb-4">
+                        <img src="./images/burger.jpg" alt="Vegetables Burger"
+                            class="max-w-[80%] h-auto object-contain">
+                    </div>
+
+                    <div class="w-12 h-1 bg-red-600 mb-4"></div>
+
+                    <h4 class="font-bold font-bebas text-2xl uppercase text-center mb-2">vegetables burger</h4>
+
+                    <p class="text-center text-base text-black">Grilled spicy veggie burger delight.</p>
+                </div>
+
+                <div
+                    class="w-80 h-80 bg-white p-6 flex flex-col items-center justify-between shadow-lg shadow-slate-400 rounded-lg">
+                    <div class="w-full flex justify-center pt-2 pb-4">
+                        <img src="./images/pizza.png" alt="Vegetables Burger" class="max-w-[60%] h-auto object-contain">
+                    </div>
+
+                    <div class="w-12 h-1 bg-red-600 mb-4"></div>
+
+                    <h4 class="font-bold font-bebas text-2xl uppercase text-center mb-2">Spacial Pizza</h4>
+
+                    <p class="text-center text-base text-black">Barbecue Italian cuisine pizza.</p>
+                </div>
+
+                <div
+                    class="w-80 h-80 bg-white p-6 flex flex-col items-center justify-between shadow-lg shadow-slate-400 rounded-lg">
+                    <div class="w-full flex justify-center pt-2 pb-4">
+                        <img src="./images/fries.jpg" alt="Vegetables Burger" class="max-w-[80%] h-auto object-contain">
+                    </div>
+
+                    <div class="w-12 h-1 bg-red-600 mb-4"></div>
+
+                    <h4 class="font-bold font-bebas text-2xl uppercase text-center mb-2">Special French fries</h4>
+
+                    <p class="text-center text-base text-black">Spicy crispy French fries treat.</p>
+                </div>
+                <div
+                    class="w-80 h-80 bg-white p-6 flex flex-col items-center justify-between shadow-lg shadow-slate-400 rounded-lg">
+                    <div class="w-full flex justify-center pt-2 pb-4">
+                        <img src="./images/chicken.jpg" alt="Vegetables Burger"
+                            class="max-w-[80%] h-auto object-contain">
+                    </div>
+
+                    <div class="w-12 h-1 bg-red-600 mb-4"></div>
+
+                    <h4 class="font-bold font-bebas text-2xl uppercase text-center mb-2">Cuisine Chicken</h4>
+
+                    <p class="text-center text-base text-black">Savory grilled cuisine-style chicken.</p>
+                </div>
 
             </div>
 
 
+
         </section>
+
+
     </main>
     <footer>
 
