@@ -14,7 +14,10 @@
             font-family: 'Bebas Neue', sans-serif;
         }
     </style>
+    <!-- External CSS file -->
     <link rel="stylesheet" href="style.css">
+
+
     <!-- For logo in Website -->
     <link rel="icon" href="./images/logo.png" type="image/x-icon">
 
@@ -40,15 +43,16 @@
 
             <!-- Navigation -->
             <nav class="hidden md:flex gap-6 text-white font-semibold">
-                <a href="#" class="hover:text-yellow-400">Home</a>
-                <a href="#" class="hover:text-yellow-400">About</a>
-                <a href="#" class="hover:text-yellow-400">Portfolio</a>
-                <a href="#" class="hover:text-yellow-400">Clients</a>
-                <a href="#" class="hover:text-yellow-400">Blog</a>
-                <a href="#" class="hover:text-yellow-400">Contact</a>
+                <a href="#home" class="hover:text-yellow-400">Home</a>
+                <a href="#about" class="hover:text-yellow-400">About</a>
+                <a href="#menu" class="hover:text-yellow-400">Portfolio</a>
+                <a href="#client" class="hover:text-yellow-400">Clients</a>
+                <a href="#client" class="hover:text-yellow-400">Blog</a>
+                <a href="#contact" class="hover:text-yellow-400">Contact</a>
             </nav>
 
-            <button class="hidden md:flex bg-yellow-400 text-black font-bold px-4 py-2 rounded hover:bg-yellow-300">
+            <button onclick="document.getElementById('reservation').scrollIntoView({ behavior: 'smooth' })"
+                class="hidden md:flex bg-yellow-400 text-black font-bold px-4 py-2 rounded hover:bg-yellow-300">
                 BOOK A TABLE
             </button>
             <button data-collapse-toggle="navbar-cta" type="button"
@@ -62,16 +66,17 @@
             </button>
         </div>
         <!-- Hero Section -->
-        <div class="container mx-auto px-6 py-12 flex flex-col lg:flex-row items-center">
+        <div id="home" class="container mx-auto px-6 py-12 flex flex-col lg:flex-row items-center">
 
             <div class="lg:w-1/2 mb-8 lg:mb-0">
                 <h1 class="text-5xl lg:text-8xl font-extrabold leading-tight">
-                    TASTE THE AUTHENTIC <br />SAUDI CUISINE
+                    TASTE THE AUTHENTIC <br />ARABIAN CUISINE
                 </h1>
                 <p class="text-white text-lg mt-4 max-w-md">
                     Among the best Saudi chefs in the world, serving you something beyond flavor.
                 </p>
-                <button class="mt-6 bg-yellow-400 text-black font-bold px-5 py-3 rounded hover:bg-yellow-300">
+                <button onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' })"
+                    class="mt-6 bg-yellow-400 text-black font-bold px-5 py-3 rounded hover:bg-yellow-300">
                     EXPLORE MENU
                 </button>
             </div>
@@ -81,7 +86,7 @@
                 <img src="/images/hero-1.jpg" alt="Food" class="rounded-lg shadow-lg" />
                 <div
                     class="h-24 w-24 absolute -bottom-6 -right-6 bg-yellow-400 text-black font-bold px-5 py-5 border-dashed border-2 border-gray-500 rounded-full shadow-md">
-                    TODAY <br> OFFER
+                    TODAY's <br> OFFER
                 </div>
             </div>
         </div>
@@ -89,7 +94,7 @@
 
     <main class="container mx-auto px-6 py-4 justify-between items-center">
         <!-- About Section -->
-        <section class="container my-24">
+        <section id="about" class="container my-24">
             <div class="lg:flex">
                 <div class="relative lg:flex-1 mr-20">
                     <img src="./images/about1.jpg" alt="Delicious Burger" class="w-full h-auto">
@@ -107,9 +112,9 @@
 
                 <div class="lg:flex-1 md:my-6">
                     <div class="border-b-2 border-[#B52B1D] flex">
-                        <a href="" class="bg-[#B52B1D] text-white px-4 py-2">About</a>
-                        <a href="" class="text-black px-4 py-2 hover:bg-red-200">Experience</a>
-                        <a href="" class="text-black px-4 py-2 hover:bg-red-200">Contact</a>
+                        <a href="#about" class="bg-[#B52B1D] text-white px-4 py-2">About</a>
+                        <a href="#client" class="text-black px-4 py-2 hover:bg-red-200">Experience</a>
+                        <a href="#contact" class="text-black px-4 py-2 hover:bg-red-200">Contact</a>
                     </div>
 
                     <div class="flex-col">
@@ -121,7 +126,7 @@
                             food in a cozy and welcoming setting. Perfect for casual meals or special occasions. Satisfy
                             your cravings and elevate your dining experience.</p>
                         <div class="flex my-10">
-                            <button
+                            <button onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' })"
                                 class="mt-6 bg-yellow-400 text-black font-bold px-5 py-3 rounded hover:bg-yellow-300">
                                 About More
                             </button>
@@ -160,7 +165,7 @@
         </section>
 
         <!-- Menu section -->
-        <section class="container my-24">
+        <section id="menu" class="container my-24">
 
             <div class="flex ">
                 <div class="w-[1168px] h-28 justify-between items-center">
@@ -252,41 +257,45 @@
         </section>
 
         <!-- Reservation Section -->
-        <section
-            class="container my-24 bg-[url('/images/table.jpg')] bg-cover px-6 py-16 md:flex md:justify-between md:items-center">
-            <div class="">
+        <section id="reservation"
+            class="relative container my-24 bg-[url('/images/table.jpg')] bg-cover px-6 py-16 md:flex md:justify-between md:items-center">
+
+            <div>
                 <p class="text-[#BD1F17] font-bold text-xl mb-2 bulleted-text">Book Now</p>
                 <h2 class="text-white font-bebas text-6xl mb-4">Book Your Table</h2>
                 <p class="text-white w-[545px] mb-8">
                     Reserve your seat now for a delightful dining experience. Quick, easy, and just a click away!
                 </p>
+                <form onsubmit="handleReservation(event)" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white">
 
-                <form class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white">
                     <input type="text" placeholder="Your Name *"
-                        class="bg-transparent border border-white px-4 py-3 placeholder-white focus:outline-none">
+                        class="bg-transparent border border-white px-4 py-3 placeholder-white focus:outline-none"
+                        required>
                     <input type="email" placeholder="Your Email"
                         class="bg-transparent border border-white px-4 py-3 placeholder-white focus:outline-none">
 
                     <input type="date"
-                        class="bg-transparent border border-white px-4 py-3 text-white focus:outline-none">
+                        class="bg-transparent border border-white px-4 py-3 text-white focus:outline-none" required>
                     <input type="number" placeholder="Total People"
-                        class="bg-transparent border border-white px-4 py-3 placeholder-white focus:outline-none">
+                        class="bg-transparent border border-white px-4 py-3 placeholder-white focus:outline-none"
+                        required>
 
                     <textarea placeholder="Message"
                         class="bg-transparent border border-white px-4 py-3 placeholder-white md:col-span-2 h-24 resize-none focus:outline-none"></textarea>
 
-
+                    <button type="submit"
+                        class="bg-yellow-500 text-black font-bold px-6 py-3 md:col-span-2 hover:bg-yellow-600 transition mt-6">
+                        BOOK NOW
+                    </button>
                 </form>
-                <button type="submit"
-                    class="bg-yellow-500 text-black font-bold px-6 py-3 md:col-span-2 hover:bg-yellow-600 transition mt-6">
-                    BOOK NOW
-                </button>
             </div>
+
+
+
         </section>
 
-
         <!-- Customer Review Section -->
-        <section class="container my-24">
+        <section id="client" class="container my-24">
             <div class="flex ">
                 <div class="w-[1168px] h-28 justify-between items-center">
                     <p class="text-xl font-bold text-[#BD1F17] bulleted-text"> Crispy, Every Bite Taste</p>
@@ -343,20 +352,82 @@
 
                 </div>
             </div>
-
-
-
         </section>
 
-
-
-
-
-
     </main>
-    <footer>
 
+    <footer id="contact"
+        class="w-full py-14 bg-[url('/images/footer.jpg')] bg-cover bg-center text-white bg-transparent bg-blend-saturation">
+        <div class="max-w-[1320px] mx-auto px-4">
+            <h2 class="text-4xl md:text-6xl font-bold text-center font-bebas mb-12">
+                We ready to have you the best dining experiences
+            </h2>
+
+            <!-- Grid for info -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left mb-10">
+                <!-- Opening Hours -->
+                <div>
+                    <div class="text-yellow-400 text-2xl mb-2"><i class="fa-solid fa-clock"></i></i></div>
+                    <h4 class="font-semibold mb-1">OPENING HOURS</h4>
+                    <p>Monday - Sunday</p>
+                    <p>9:00 AM to 11:30 PM</p>
+                </div>
+
+                <!-- Let's Talk -->
+                <div>
+                    <div class="text-yellow-400 text-2xl mb-2"><i class="fa-solid fa-phone-volume"></i></div>
+                    <h4 class="font-semibold mb-1">LET'S TALK</h4>
+                    <p>Phone: 1-800-222-4545</p>
+                    <p>Fax: 1-800-222-4545</p>
+                </div>
+
+                <!-- Book a Table -->
+                <div>
+                    <div class="text-yellow-400 text-2xl mb-2"><i class="fa-solid fa-envelope"></i></i></div>
+                    <h4 class="font-semibold mb-1">BOOK A TABLE</h4>
+                    <p>Email: contact@bitetheory.com</p>
+                    <p>Support: support@bitetheory.com</p>
+                </div>
+
+                <!-- Our Address -->
+                <div>
+                    <div class="text-yellow-400 text-2xl mb-2"><i class="fa-solid fa-location-dot"></i></div>
+                    <h4 class="font-semibold mb-1">OUR ADDRESS</h4>
+                    <p>11<sup>th</sup>
+                        Floor,ADB Bhaban, Agargaon</p>
+                    <p>Dhaka, Bangladesh.</p>
+                </div>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="flex justify-center space-x-4 text-xl mb-6">
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center border border-white rounded-full hover:bg-yellow-500 transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center border border-white rounded-full hover:bg-yellow-500 transition">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center border border-white rounded-full hover:bg-yellow-500 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ariful79/"
+                    class="w-10 h-10 flex items-center justify-center border border-white rounded-full hover:bg-yellow-500 transition">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+
+
+            <!-- Copyright -->
+            <p class="text-center text-sm text-gray-300">© 2025 All Rights Reserved</p>
+        </div>
     </footer>
+
+
+
 </body>
+
 
 </html>
