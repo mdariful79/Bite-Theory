@@ -39,7 +39,7 @@ Welcome to **Bite Theory**, a modern and responsive restaurant web application d
 ![image](https://github.com/user-attachments/assets/174b100c-907d-4482-afd9-afcb5a198b6b)
 ![image](https://github.com/user-attachments/assets/f7944d56-e0ca-47e9-8e23-ae7fdbe73510)
 
-### Foe Tab and Mobile View Please Visit the website (https://bite-theory.vercel.app/)
+### For Tablet View or Mobile View Please Visit the website (https://bite-theory.vercel.app/)
 
 
 ---
